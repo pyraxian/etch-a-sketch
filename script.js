@@ -19,3 +19,12 @@ masterContainer.addEventListener('mouseover', (event) => {
     console.log(`${event.target.id} was moused over`);
     event.target.style.background = 'blue';
 });
+
+// Button event listener
+const btn = document.querySelector('#newGrid');
+
+btn.addEventListener("click", () => {
+    let newGridSize = Math.floor(Number(prompt('Please provide an integer for a new grid size.')));
+    // Delete old grid
+    // Call createGridDivs(newGridSize);
+});
