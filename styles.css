@@ -1,15 +1,17 @@
 #masterContainer {
     display: flex;
-    border: 2px solid red;
-    max-width: 1000px;
+    border: 1px solid red;
+    width: 500px;
+    height: 500px;
     flex-wrap: wrap;
+    box-sizing: border-box;
 }
 
 #masterContainer div {
-    background: grey;
+    background: lightgray;
     border: 1px solid black;
-    min-height: 50px;
-    min-width: 50px;
+    min-height: 25px;
+    min-width: 25px;
     display: flex;
-    flex: 1;
+    flex: 1 0 20%;
 }
