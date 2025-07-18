@@ -16,6 +16,6 @@ createGridDivs(16);
 const masterContainer = document.querySelector("#masterContainer");
 
 masterContainer.addEventListener('mouseover', (event) => {
-    console.log(`Box ${event.target.id} was moused over`);
+    console.log(`${event.target.id} was moused over`);
     event.target.style.background = 'blue';
 });
