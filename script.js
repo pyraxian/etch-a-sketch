@@ -2,22 +2,26 @@
 function createGridDivs(num) {
     const masterContainer = document.querySelector("#masterContainer");
 
-    for (let i = 0; i < (num * num); i++) {
-        const newDiv = document.createElement("div");
-        newDiv.setAttribute("class", "grid");
-        newDiv.setAttribute('id', `box${i}`);
-        masterContainer.appendChild(newDiv);
+    for (let i = 0; i < num; i++) {
+        const rowDiv = document.createElement('div');
+        rowDiv.setAttribute('class', 'rowContainer');
+        for (let j = 0; j < num; j++) {
+            const gridDiv = document.createElement('div');
+            gridDiv.setAttribute('class', 'grid');
+            rowDiv.appendChild(gridDiv);
+        }
+        masterContainer.appendChild(rowDiv);
     }
+
 }
 
-createGridDivs(16);
+createGridDivs(6);
 
 // Mouseover listener
 const masterContainer = document.querySelector("#masterContainer");
-
 masterContainer.addEventListener('mouseover', (event) => {
-    console.log(`${event.target.id} was moused over`);
-    if (event.target.id != masterContainer) {
+    // console.log(`${event.target.id} was moused over`);
+    if ((event.target.id != 'masterContainer') && (event.target.class != 'rowContainer')) {
         event.target.style.background = 'blue';
     }
 });
