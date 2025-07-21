@@ -4,19 +4,21 @@
     width: 500px;
     height: 500px;
     border: 1px solid red;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     box-sizing: border-box;
 }
 
 #masterContainer div {
     background: lightgray;
-    border: 1px solid black;
-    width: 28px;
+    /* border: 1px solid black; */
     display: flex;
     flex: 1 1 auto;
-    /* flex-basis: auto; */
 }
 
-#newGrid {
+#rowContainer {
+    width: 500px;
+}
+
+#newGridBtn {
     margin: 20px;
 }

@@ -15,7 +15,7 @@ function createGridDivs(num) {
 
 }
 
-createGridDivs(6);
+createGridDivs(20);
 
 // Mouseover listener
 const masterContainer = document.querySelector("#masterContainer");
