@@ -2,18 +2,18 @@
     display: flex;
     width: 500px;
     height: 500px;
+    border: 1px solid red;
     flex-wrap: wrap;
     box-sizing: border-box;
-    align-items: stretch;
 }
 
 #masterContainer div {
     background: lightgray;
     border: 1px solid black;
-    min-width: 30px;
+    width: 28px;
     display: flex;
-    flex: 1;
-    flex-basis: auto;
+    flex: 1 1 auto;
+    /* flex-basis: auto; */
 }
 
 #newGrid {

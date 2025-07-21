@@ -17,7 +17,9 @@ const masterContainer = document.querySelector("#masterContainer");
 
 masterContainer.addEventListener('mouseover', (event) => {
     console.log(`${event.target.id} was moused over`);
-    event.target.style.background = 'blue';
+    if (event.target.id != masterContainer) {
+        event.target.style.background = 'blue';
+    }
 });
 
 // Button event listener
