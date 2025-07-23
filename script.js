@@ -15,12 +15,13 @@ function createGridDivs(num) {
     console.log(`Created a grid of size ${num} x ${num}.`);
 }
 
-createGridDivs(20);
+const defaultGridSize = 20;
+createGridDivs(defaultGridSize);
 
 // Mouseover listener
 const masterContainer = document.querySelector("#masterContainer");
+
 masterContainer.addEventListener('mouseover', (event) => {
-    // console.log(`${event.target.id} was moused over`);
     if ((event.target.id != 'masterContainer') && (event.target.class != 'rowContainer')) {
         event.target.style.background = 'blue';
     }
@@ -31,6 +32,7 @@ const btn = document.querySelector('#newGridBtn');
 
 btn.addEventListener("click", () => {
     let newGridSize = Math.floor(Number(prompt('Please provide an integer between 1 and 100 for a new grid size.')));
+
     if (newGridSize > 100) {
         alert('The number you entered exceeds the size limit of 100. \nPlease enter a smaller number.');
     } else if (newGridSize < 1) {
