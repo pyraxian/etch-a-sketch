@@ -12,6 +12,7 @@ function createGridDivs(num) {
         }
         masterContainer.appendChild(rowDiv);
     }
+    console.log(`Created a grid of size ${num} x ${num}.`);
 }
 
 createGridDivs(20);
@@ -29,13 +30,16 @@ masterContainer.addEventListener('mouseover', (event) => {
 const btn = document.querySelector('#newGridBtn');
 
 btn.addEventListener("click", () => {
-    let newGridSize = Math.floor(Number(prompt('Please provide an integer for a new grid size.')));
+    let newGridSize = Math.floor(Number(prompt('Please provide an integer between 1 and 100 for a new grid size.')));
     if (newGridSize > 100) {
         alert('The number you entered exceeds the size limit of 100. \nPlease enter a smaller number.');
     } else if (newGridSize < 1) {
         alert('The number you entered is too small to construct a grid. \nPlease enter a larger number, greater than 0, but less than 100.');
     } else {
-        // Delete old grid
-        // Call createGridDivs(newGridSize);
+        const rows = document.querySelectorAll(".rowContainer");
+        rows.forEach((row) => {
+            row.remove();
+        });
+        createGridDivs(newGridSize);
     }
 });
